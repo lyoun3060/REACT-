@@ -44,12 +44,25 @@ const TestSample = () => {
     setInputText("");
   };
 
-  //추가부분2(데이터 삭제, 더블 클릭시)
+  //추가 부분2 : 데이터 삭제. 더블 클릭시
+  //예) id = 3인경우, 배열에서 id가 3인것만 제외하고 새로운 배열을 생성
+  //즉 id의 값이 1~4까지만 있으면 그중에서 3만 제외하고 다시배열 생성하는것
+  const onRemove = (id) => {
+    const nextNames = names.filter((name) => name.id !== id);
+    setNames(nextNames);
+  };
+
+  const nameList = names.map((name) => (
+    //onDoubleClick가 되면 =>부분의 함수 실행됨
+    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+      {name.text}
+    </li>
+  ));
 
   //names라는 배열에 요소중에서 하나를 꺼낸 요소가 name이라고 보면 됨
   //names의 길이 : 4 => 4번 수행함
   //수행결과는 => li라는 태그의 요소로 넣고있음(li에 키값 벨류값으로 들어가고있음)
-  const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
+  //   const nameList = names.map((name) => <li key={name.id}>{name.text}</li>);
 
   //원래는 <div>라고 명시해야히자만, 생략시 <Fragment>생략가능 ->대신해서 <>로 표기가능
   return (
