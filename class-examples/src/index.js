@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 // import Tick from './ch4/Tick';
 // import MyTest1 from './ch4/MyTest1';
 // import CommentList from './ch5/CommentList';
-import NotiList from './ch6/NotiList';
+import MenuItemList from './ch6/MenuItemList';
 
 //setInterval(콜백함수, 시간(ms)) = 특정시간마다, 첫번째 매개변수에서 정의한 함수가 실행됨
 // setInterval( ()=> {
@@ -31,7 +31,7 @@ import NotiList from './ch6/NotiList';
 ReactDOM.render(
   <React.StrictMode>
     {/* 부모 컴퍼넌트 */}
-    <NotiList/>
+    <MenuItemList/>
   </React.StrictMode>,
   document.getElementById('root')
 )
