@@ -43,10 +43,21 @@ class Noti extends Component {
     this.state = {};
   }
 
+  //자식 부분에서 각 생명주기 함수들 콘솔로 찍어서 확인해보기.
+  componentDidMount() {
+    console.log("componentDidMount() 호출이 되었음.");
+  }
+  componentDidUpdate() {
+    console.log("componentDidUpdate() 호출이 되었음.");
+  }
+  componentWillUnmount() {
+    console.log("componentWillUnmount() 호출이 되었음.");
+  }
+
   render() {
     return (
       <div style={styles.wrapper}>
-        <span style={styles.messageText}>{this.props.messageText}</span>
+        <span style={styles.messageText}>{this.props.message}</span>
       </div>
     );
   }

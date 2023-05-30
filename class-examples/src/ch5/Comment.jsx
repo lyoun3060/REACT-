@@ -34,7 +34,7 @@ const styles = {
     fontSize: 18,
   },
 };
-
+//자식
 const Comment = (props) => {
   return (
     <div style={styles.wrapper}>

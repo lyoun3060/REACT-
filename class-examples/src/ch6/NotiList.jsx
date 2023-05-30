@@ -28,48 +28,46 @@ class NotiList extends Component {
     };
   }
 
-  //생명주기 확인(마운트, 업데이트, 언마운트)
-  //여기서는 componentDidMount확인할 것임 ->마운트되고(화면에 그려지고)난 후, 호출되는 메서드임
+  //생명주기 확인 마운트, 업데이트, 언마운트
+  // componentDidMount 확인. 마운트가되고(화면에 그려지고) 후 , 호출되는 메서드,
   componentDidMount() {
-    //비구조화 할당으로 풀어서 쓰면 -> this.state.noti
+    // 비구조화 할당으로 -> this.state.noti 표현을 하면.
     const { noti } = this.state;
+    //setInterval 매개변수가 2개있음. 첫번째 콜백함수, 두번째, 특정시간단위(ms).
+    // 1000 ms -> 1초
+    // 특정 시간 후에 , 콜백 함수를 호출 하는 역할.
+    //  화살표 함수로 정의 가 되었음
+    timer = setInterval(() => {
+      // noti 라는 빈배열이 기존의 예약된 배열의 길이보다 작으면
+      // 무조건 실행.
+      if (noti.length < reserveNoti.length) {
+        // 현재 index 는 noti의 빈배열의 길이 : 0
+        const index = noti.length;
+        // noti 배열의 내장 함수 push(=add) 추가.
+        // 빈 배열 noti에 구성요소로 예약된 더미 데이터(3개)
+        // noti = [{ message: "메세지1" }]
+        noti.push(reserveNoti[index]);
+        //noti 는 배열에 요소가 추가되었음.
+        this.setState({
+          // p,s,부, 강 -> 업데이트가 발생. -> 다시 그려진다. -> 부모-> 자식 새로 그린다.
+          // 빈 배열에 , 요소가 하나가 추가된 배열이 재할당.
+          noti: noti,
+        });
+      } else {
+        // noti라는 빈배열에 요소를 3개 까지 추가 가능, 그 3개 초과 되면
+        // 이 함수가 호출.
+        // timer : setInterval  함수.
+        // clearInterval(timer);
 
-    //setInterval매개변수가 2개있음, 첫번째는 콜백함수, /두번째는 특정시간단위(ms)
-    //다시말하면 setInterval은 (콜백함수, 특정시간후에)를 호출하는 역할
-    //화살표 함수로 정의되어있음
-    timer = setInterval(
-      () => {
-        //noti라는 빈배열이 기존의 예약된 배열의 길이보다 작으면 무조건 실행
-        if (noti.length < reserveNoti.length) {
-          //현재 index는 noti의 빈배열의 길이 = 0
-          const index = noti.length;
-
-          //noti배열의 내장 함수 push(=add) 추가
-          //빈 배열 noti에 구성요소로 예약된 더미데이터(3개)가 추가됨
-          // noti=[{message:"메세지1"}]이 됨(순차적으로 들어갈 예정)
-          noti.push(reserveNoti[index]);
-          this.setState({
-            //noti라는 빈 배열에 요소가 하나씩 추가됨(배열이 재할당)
-            //다시말해 업데이트가 된다는것-> 다시 그려진다 -> 부모부터 자식까지 새로 그려진다.
-            noti: noti,
-          });
-        } else {
-          //noti라는 빈 배열에 요소를 3개까지 추가된다.
-          //3개를 초과하면 이 함수(clearIntervla)가 호출됨
-          //   clearInterval(timer);
-          //componentWillUnmount()를 콘솔에 띄우기 위해, 해당 데이터를 비워주는 작업
-
-          //데이터가 비워지면, 해당 컴포넌트가 그릴게 없어서 사라짐
-          //소멸 하기 전에 componentWillUnmount() 메서드가 호출됨
-          this.setState({
-            //처음에 noti빈 배열 -> 요소를 3개 추가하고 -> 3개 초과이면, 배열을 비우기 -> 빈배열 할당
-            noti: [],
-          });
-        }
-      }, //여기까지 콜백함수
-      //여기서는 타이머(ms)
-      1000
-    );
+        //componentWillUnmount 콘솔에 띄우기 위해서, 해당 데이터를 비워 주는 작업.
+        // 데이터가 비워지면, 해당 컴포넌트가 그릴게 없어서,  사라진다.
+        // 소멸 하기 전에 위에 메서드가 호출이 됨. componentWillUnmount()
+        this.setState({
+          //처음에 noti 빈 배열 -> 요소를 3개 추가하고 -> 3개 초과이면, 배열을 비우기. -> 빈 배열 할당.
+          noti: [],
+        });
+      }
+    }, 1000);
   }
 
   //그리기
