@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 //문제점2) => 해당 함수형 컴포넌트 이름 첫글자는 대문자로 적혀야함
 // import Tick from './ch4/Tick';
 // import MyTest1 from './ch4/MyTest1';
-import CommentList from './ch5/CommentList';
+// import CommentList from './ch5/CommentList';
+import NotiList from './ch6/NotiList';
 
 //setInterval(콜백함수, 시간(ms)) = 특정시간마다, 첫번째 매개변수에서 정의한 함수가 실행됨
 // setInterval( ()=> {
@@ -17,10 +18,10 @@ import CommentList from './ch5/CommentList';
     //<React.StrictMode>는 React 애플리케이션 내에서 개발 모드에서 추가적인 검사와 경고를 활성화하는 데 사용되는 컴포넌트
     //개발할때만 사용하는거고, 실제로는 사용하면 X
     // <React.StrictMode>    
-    {/* <Tick/> */}
-    {/* <MyTest1 name="김수장" number={20} >
-      child영역입니다.
-    </MyTest1> */}
+//{/* <Tick/> */}
+  //  {/* <MyTest1 name="김수장" number={20} >
+    //  child영역입니다.
+    //</MyTest1> */}
     
   // </React.StrictMode>,
 //   document.getElementById('root')
@@ -29,7 +30,8 @@ import CommentList from './ch5/CommentList';
 // );
 ReactDOM.render(
   <React.StrictMode>
-    <CommentList/>
+    {/* 부모 컴퍼넌트 */}
+    <NotiList/>
   </React.StrictMode>,
   document.getElementById('root')
 )
