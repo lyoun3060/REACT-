@@ -41,6 +41,7 @@ class Noti extends Component {
     //클래스 컴포넌트에서는 해당 state상태에 접근시, this.state로 접근
     super(props);
     this.state = {};
+    //state는  컴포넌트의 생명주기 동안 변경될 수 있는 data를 저장하고 관리하는데 사용
   }
 
   //자식 부분에서 각 생명주기 함수들 콘솔로 찍어서 확인해보기.
