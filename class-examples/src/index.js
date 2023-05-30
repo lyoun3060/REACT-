@@ -9,7 +9,8 @@ import reportWebVitals from './reportWebVitals';
 // import MyTest1 from './ch4/MyTest1';
 // import CommentList from './ch5/CommentList';
 // import MenuItemList from './ch6/MenuItemList';
-import TestSample from './ch6-3 insert delete/TestSample';
+// import TestSample from './ch6-3 insert delete/TestSample';
+import Test2 from './ch6-3 insert delete/Test2';
 
 //setInterval(콜백함수, 시간(ms)) = 특정시간마다, 첫번째 매개변수에서 정의한 함수가 실행됨
 // setInterval( ()=> {
@@ -33,7 +34,8 @@ ReactDOM.render(
   <React.StrictMode>
     {/* 부모 컴퍼넌트 */}
     {/* <MenuItemList/> */}
-    <TestSample/>
+    {/* <TestSample/> */}
+    <Test2/>
   </React.StrictMode>,
   document.getElementById('root')
 )
