@@ -11,7 +11,11 @@ import reportWebVitals from './reportWebVitals';
 // import MenuItemList from './ch6/MenuItemList';
 // import TestSample from './ch6-3 insert delete/TestSample';
 // import Test2 from './ch6-3 insert delete/Test2';
-import Counter from './ch7/Counter';
+// import Counter from './ch7/Counter';
+// import TestBefore from './ch7-2/TestBefore';
+// import TestAfter from './ch7-2(useMemo)/TestAfter';
+import BeforeUseCallback from './ch7-3(useCallback)/BeforeUseCallback';
+import AfterUseCallback from './ch7-3(useCallback)/AfterUseCallback';
 
 //setInterval(콜백함수, 시간(ms)) = 특정시간마다, 첫번째 매개변수에서 정의한 함수가 실행됨
 // setInterval( ()=> {
@@ -37,7 +41,10 @@ ReactDOM.render(
     {/* <MenuItemList/> */}
     {/* <TestSample/> */}
     {/* <Test2/> */}
-    <Counter/>
+    {/* <Counter/> */}
+    {/* <TestAfter/> */}
+    {/* <BeforeUseCallback/> */}
+    <AfterUseCallback/>
   </React.StrictMode>,
   document.getElementById('root')
 )
