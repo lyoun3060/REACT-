@@ -18,15 +18,19 @@ const Test2 = () => {
   console.log(inputMessage);
 
   const onClick = () => {
-    const nextNames = names.concat({
-      id: nextId,
-      name: inputName != null ? inputName : null,
-      message: inputMessage != null ? inputMessage : null,
-    });
-    setNextId(nextId + 1);
-    setNames(nextNames);
-    setInputName("");
-    setInputMessage("");
+    if (inputName === "" || inputMessage === "") {
+      alert("Please fill in all fields");
+    } else {
+      const nextNames = names.concat({
+        id: nextId,
+        name: inputName,
+        message: inputMessage,
+      });
+      setNextId(nextId + 1);
+      setNames(nextNames);
+      setInputName("");
+      setInputMessage("");
+    }
   };
 
   const nameList = names.map((check) => (
