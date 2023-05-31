@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+// import TextInputTest from './ch07-4(useRef)/TextInputTest';
 //문제점2) => 해당 함수형 컴포넌트 이름 첫글자는 대문자로 적혀야함
 // import Tick from './ch4/Tick';
 // import MyTest1 from './ch4/MyTest1';
@@ -14,8 +15,10 @@ import reportWebVitals from './reportWebVitals';
 // import Counter from './ch7/Counter';
 // import TestBefore from './ch7-2/TestBefore';
 // import TestAfter from './ch7-2(useMemo)/TestAfter';
-import BeforeUseCallback from './ch7-3(useCallback)/BeforeUseCallback';
-import AfterUseCallback from './ch7-3(useCallback)/AfterUseCallback';
+// import BeforeUseCallback from './ch7-3(useCallback)/BeforeUseCallback';
+// import AfterUseCallback from './ch7-3(useCallback)/AfterUseCallback';
+// import Acc from './ch7(test)/Acc';
+import Accommodate from './ch7(test)/Accommodate';
 
 //setInterval(콜백함수, 시간(ms)) = 특정시간마다, 첫번째 매개변수에서 정의한 함수가 실행됨
 // setInterval( ()=> {
@@ -44,7 +47,10 @@ ReactDOM.render(
     {/* <Counter/> */}
     {/* <TestAfter/> */}
     {/* <BeforeUseCallback/> */}
-    <AfterUseCallback/>
+    {/* <AfterUseCallback/> */}
+    {/* <TextInputTest/> */}
+    {/* <UseCounter/> */}
+    <Accommodate/>
   </React.StrictMode>,
   document.getElementById('root')
 )
