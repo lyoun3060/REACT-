@@ -8,18 +8,24 @@ const sNames = {
 // 공유 state 해서,
 // 부모 : Calc , ->(props) 자식 : TestInput
 const TestInput = (props) => {
-  const [temp, setTemp] = useState("");
+  //   const [temp, setTemp] = useState("");
 
   const handleChange = (event) => {
     // 호출 되면서 -> 업데이트
-    setTemp(event.target.value);
+    // setTemp(event.target.value);
+
+    //부모로부터 state공유 받기
+    props.onTempChange(event.target.value);
   };
 
   return (
     <div>
       <fieldset>
         <legend>온도를 입력하세요: (단위:{sNames[props.scale]})</legend>
-        <input value={temp} onChange={handleChange} />
+        {/* <input value={temp} onChange={handleChange} /> */}
+
+        {/* 공유 state 온도를 사용하기. */}
+        <input value={props.temp} onChange={handleChange} />
         {/* 위에 끊는 부분에 알림 메세지 컴포넌트에 해당 props 로 celsius 값을 전달은
             온도 타입 문자열 -> 실수 변경. */}
       </fieldset>
