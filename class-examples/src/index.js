@@ -4,8 +4,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import TestNullValue from './ch11/TestNullValue';
+// import FileImageTest from './ch11/FileImageTest';
 // import AttendanceBook from './ch10(test)/AttendanceBook';
-import NameForm from './ch11/NameForm';
+// import NameForm from './ch11/NameForm';
 // import TextInputTest from './ch07-4(useRef)/TextInputTest';
 //문제점2) => 해당 함수형 컴포넌트 이름 첫글자는 대문자로 적혀야함
 // import Tick from './ch4/Tick';
@@ -58,10 +60,17 @@ ReactDOM.render(
     {/* <Toggle/> */}
     {/* <LandingPage/> */}
     {/* <AttendanceBook/> */}
-    <NameForm/>
+    {/* <FileImageTest/> */}
+    <TestNullValue/>
   </React.StrictMode>,
   document.getElementById('root')
 )
+
+//11장 input Null Value
+// setTimeout(()=>{
+//   ReactDOM.render(<input value={null}/>, document.getElementById('root'))
+// },1000)
+
 //(활용법2)
 // const test = () => {
 //   ReactDOM.render(
