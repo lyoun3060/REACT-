@@ -18,7 +18,9 @@ import reportWebVitals from './reportWebVitals';
 // import BeforeUseCallback from './ch7-3(useCallback)/BeforeUseCallback';
 // import AfterUseCallback from './ch7-3(useCallback)/AfterUseCallback';
 // import Acc from './ch7(test)/Acc';
-import Accommodate from './ch7(test)/Accommodate';
+// import Accommodate from './ch7(test)/Accommodate';
+// import Toggle from './ch8/Toggle';
+import LandingPage from './ch9(test)/LandingPage';
 
 //setInterval(콜백함수, 시간(ms)) = 특정시간마다, 첫번째 매개변수에서 정의한 함수가 실행됨
 // setInterval( ()=> {
@@ -50,7 +52,9 @@ ReactDOM.render(
     {/* <AfterUseCallback/> */}
     {/* <TextInputTest/> */}
     {/* <UseCounter/> */}
-    <Accommodate/>
+    {/* <Accommodate/> */}
+    {/* <Toggle/> */}
+    <LandingPage/>
   </React.StrictMode>,
   document.getElementById('root')
 )
