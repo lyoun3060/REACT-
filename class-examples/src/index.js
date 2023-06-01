@@ -4,7 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import AttendanceBook from './ch10(test)/AttendanceBook';
+// import AttendanceBook from './ch10(test)/AttendanceBook';
+import NameForm from './ch11/NameForm';
 // import TextInputTest from './ch07-4(useRef)/TextInputTest';
 //문제점2) => 해당 함수형 컴포넌트 이름 첫글자는 대문자로 적혀야함
 // import Tick from './ch4/Tick';
@@ -56,7 +57,8 @@ ReactDOM.render(
     {/* <Accommodate/> */}
     {/* <Toggle/> */}
     {/* <LandingPage/> */}
-    <AttendanceBook/>
+    {/* <AttendanceBook/> */}
+    <NameForm/>
   </React.StrictMode>,
   document.getElementById('root')
 )
