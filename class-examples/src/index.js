@@ -5,8 +5,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import TestNullValue from './ch11/TestNullValue';
-import SignUp from './ch11(test)/SignUp';
-import FileImageTest from './ch11/FileImageTest';
+// import SignUp from './ch11(test)/SignUp';
+// import FileImageTest from './ch11/FileImageTest';
+import Calc from './ch12/Calc';
 // import AttendanceBook from './ch10(test)/AttendanceBook';
 // import NameForm from './ch11/NameForm';
 // import TextInputTest from './ch07-4(useRef)/TextInputTest';
@@ -62,7 +63,8 @@ ReactDOM.render(
     {/* <LandingPage/> */}
     {/* <AttendanceBook/> */}
     {/* <FileImageTest/> */}
-    <SignUp/>
+    {/* <SignUp/> */}
+    <Calc/>
   </React.StrictMode>,
   document.getElementById('root')
 )
