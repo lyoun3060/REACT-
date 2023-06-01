@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import AttendanceBook from './ch10(test)/AttendanceBook';
 // import TextInputTest from './ch07-4(useRef)/TextInputTest';
 //문제점2) => 해당 함수형 컴포넌트 이름 첫글자는 대문자로 적혀야함
 // import Tick from './ch4/Tick';
@@ -20,7 +21,7 @@ import reportWebVitals from './reportWebVitals';
 // import Acc from './ch7(test)/Acc';
 // import Accommodate from './ch7(test)/Accommodate';
 // import Toggle from './ch8/Toggle';
-import LandingPage from './ch9(test)/LandingPage';
+// import LandingPage from './ch9(test)/LandingPage';
 
 //setInterval(콜백함수, 시간(ms)) = 특정시간마다, 첫번째 매개변수에서 정의한 함수가 실행됨
 // setInterval( ()=> {
@@ -54,7 +55,8 @@ ReactDOM.render(
     {/* <UseCounter/> */}
     {/* <Accommodate/> */}
     {/* <Toggle/> */}
-    <LandingPage/>
+    {/* <LandingPage/> */}
+    <AttendanceBook/>
   </React.StrictMode>,
   document.getElementById('root')
 )
