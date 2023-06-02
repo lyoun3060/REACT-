@@ -4,10 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+// import Card from './ch13(test)/Card';
+import ProfileCard from './ch13(test)/ProfileCard';
 // import TestNullValue from './ch11/TestNullValue';
 // import SignUp from './ch11(test)/SignUp';
 // import FileImageTest from './ch11/FileImageTest';
-import Calc from './ch12/Calc';
+// import Calc from './ch12/Calc';
+// import WelcomeDialog from './ch13/WelcomeDialog';
 // import AttendanceBook from './ch10(test)/AttendanceBook';
 // import NameForm from './ch11/NameForm';
 // import TextInputTest from './ch07-4(useRef)/TextInputTest';
@@ -64,7 +67,9 @@ ReactDOM.render(
     {/* <AttendanceBook/> */}
     {/* <FileImageTest/> */}
     {/* <SignUp/> */}
-    <Calc/>
+    {/* <Calc/> */}
+    {/* <WelcomeDialog/> */}
+    <ProfileCard/>
   </React.StrictMode>,
   document.getElementById('root')
 )
