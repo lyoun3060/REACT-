@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Categories from './ch16(pdtest)/Components/Categories';
+import ItemList from './ch16(pdtest)/ItemList';
+import React,{useState, useCallback} from 'react';
 
 function App() {
+  const[category, setCategory] = useState('food')
+  const onSelect = useCallback(category =>setCategory(category),[])
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Categories category={category} onSelect={onSelect}/>
+      <ItemList category={category}/>
     </div>
   );
 }

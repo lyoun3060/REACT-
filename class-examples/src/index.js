@@ -3,10 +3,15 @@ import React from 'react';
 //react-dom으로 고쳐주자
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import MainPage from './ch15/MainPage';
 // import Sample from './ch15/Sample';
-import Blocks from './ch15(test)/Blocks';
+// import Blocks from './ch15(test)/Blocks';
+// import CallbackTest2 from './ch16(pdtest)/CallbackTest2';
+// import ItemList from './ch16(pdtest)/ItemList';
+// import Categories from './ch16(pdtest)/Components/Categories';
+// import ItemList from './ch16(pdtest)/ItemList';
 // import Card from './ch13(test)/Card';
 // import ProfileCard from './ch13(test)/ProfileCard';
 // import Main from './ch14(test)/Main';
@@ -53,6 +58,13 @@ import Blocks from './ch15(test)/Blocks';
 //   )
 // }, 1000
 // );
+
+//훅스는 최고 부모에서 정의를 해야함
+//현재 오류가 나는 이유는 최고 부모가 없기때문임
+//App.js()를 최고부모로 만들자 ->1)Categories, 2)ItemList
+// const[category, setCategory] = useState('food')
+// const onSelect = useCallback(category =>setCategory(category),[])
+
 ReactDOM.render(
   <React.StrictMode>
     {/* 부모 컴퍼넌트 */}
@@ -76,7 +88,11 @@ ReactDOM.render(
     {/* <ProfileCard/> */}
     {/* <Main/> */}
     {/* <Sample/> */}
-    <Blocks/>
+    {/* <Blocks/> */}
+    {/* <CallbackTest2/> */}
+    <App/>
+    {/* <Categories category={category} onSelect={onSelect}/>
+    <ItemList category={category}/> */}
   </React.StrictMode>,
   document.getElementById('root')
 )
