@@ -27,6 +27,7 @@ const ItemListBlock = styled.div`
 const ItemList = ({ category }) => {
   //state 관리하기 위한 변수들(하나는 데이터, 하나는 로딩(받고있는지 상태 여부))
   const [articles, setArticles] = useState(null);
+  const [toures, setToures] = useState(null);
   const [loading, setLoading] = useState(false);
 
   //useEffect(콜백함수, 의존배열) -> 마운트, 업데이트를 훅스로 쉽게 구현하는 함수
@@ -58,7 +59,7 @@ const ItemList = ({ category }) => {
             //response.data 이부분 까지 는 고정이고, 해당 공공데이터의 데이터 구조 타입에 따라서 조금씩 다름.
             //ex)
             console.log(response.data.getTourAttrList.item);
-            setArticles(response.data.getTourAttrList.item);
+            setToures(response.data.getTourAttrList.item);
             break;
 
           default:
@@ -81,17 +82,28 @@ const ItemList = ({ category }) => {
   //아직 response값이 설정되지 않았을때, 공공데이터를 못받은 경우
   if (!articles) {
     console.log("articles응답이 없습니다.");
-    //ghkausdp dksrmfuwna.
+    //화면에 안그려줌
+    return null;
+  }
+  if (!toures) {
+    console.log("toures응답이 없습니다.");
+    //화면에 안그려줌
     return null;
   }
 
   return (
-    <ItemListBlock>
-      {articles.map((article) => (
-        //key 제목으로 한건 테스트용, 썩 좋은 결과를 찾안것 X,
-        <PdItem key={article.MAIN_TITLE} article={article} />
-      ))}
-    </ItemListBlock>
+    <div>
+      <ItemListBlock>
+        {articles.map((article) => (
+          //key 제목으로 한건 테스트용, 썩 좋은 결과를 찾안것 X,
+          <PdItem key={article.MAIN_TITLE} article={article} />
+        ))}
+        {toures.map((tour) => (
+          //key 제목으로 한건 테스트용, 썩 좋은 결과를 찾안것 X,
+          <PdItem key={tour.trrstNm} article={tour} />
+        ))}
+      </ItemListBlock>
+    </div>
   );
 };
 
