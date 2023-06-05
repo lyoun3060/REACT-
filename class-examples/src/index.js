@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import Card from './ch13(test)/Card';
-import ProfileCard from './ch13(test)/ProfileCard';
+// import ProfileCard from './ch13(test)/ProfileCard';
+import Main from './ch14(test)/Main';
 // import TestNullValue from './ch11/TestNullValue';
 // import SignUp from './ch11(test)/SignUp';
 // import FileImageTest from './ch11/FileImageTest';
@@ -69,7 +70,8 @@ ReactDOM.render(
     {/* <SignUp/> */}
     {/* <Calc/> */}
     {/* <WelcomeDialog/> */}
-    <ProfileCard/>
+    {/* <ProfileCard/> */}
+    <Main/>
   </React.StrictMode>,
   document.getElementById('root')
 )
