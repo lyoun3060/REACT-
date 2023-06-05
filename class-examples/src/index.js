@@ -4,7 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MainPage from './ch15/MainPage';
+// import MainPage from './ch15/MainPage';
+// import Sample from './ch15/Sample';
+import Blocks from './ch15(test)/Blocks';
 // import Card from './ch13(test)/Card';
 // import ProfileCard from './ch13(test)/ProfileCard';
 // import Main from './ch14(test)/Main';
@@ -73,7 +75,8 @@ ReactDOM.render(
     {/* <WelcomeDialog/> */}
     {/* <ProfileCard/> */}
     {/* <Main/> */}
-    <MainPage/>
+    {/* <Sample/> */}
+    <Blocks/>
   </React.StrictMode>,
   document.getElementById('root')
 )
