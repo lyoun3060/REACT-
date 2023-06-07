@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 //문제점 1) => react-dom/client 하위에는 dom이라는게 없음
 //react-dom으로 고쳐주자
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//BrowserRouter-> 웹 브라우저 히스ㅗㅌ리 기능을 이용해서, 페이지 라우팅을 하는 형식
+// ㄴ>Roustes, Route
+//route=길 / router = 길 안내자 / routing = 길을 안내한다
+//url라우팅 = 페이징 라우팅
+//ex) https://www.naver.com = 호스트 서버
+//ex2)https://www.naver.com/tests =>    (/tests) =path(길, 경로)
+import { BrowserRouter } from 'react-router-dom';
+
 // import MainPage from './ch15/MainPage';
 // import Sample from './ch15/Sample';
 // import Blocks from './ch15(test)/Blocks';
@@ -65,6 +73,8 @@ import reportWebVitals from './reportWebVitals';
 // const[category, setCategory] = useState('food')
 // const onSelect = useCallback(category =>setCategory(category),[])
 
+//순서2, 
+//라우팅시, 위에서 설정한 BrowerRouter를 최고 부모의 컴포넌트를 감싸면 됩니다.
 ReactDOM.render(
   <React.StrictMode>
     {/* 부모 컴퍼넌트 */}
@@ -90,7 +100,9 @@ ReactDOM.render(
     {/* <Sample/> */}
     {/* <Blocks/> */}
     {/* <CallbackTest2/> */}
+    <BrowserRouter>
     <App/>
+    </BrowserRouter>
     {/* <Categories category={category} onSelect={onSelect}/>
     <ItemList category={category}/> */}
   </React.StrictMode>,
